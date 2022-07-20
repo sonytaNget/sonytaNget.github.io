@@ -37,10 +37,6 @@ p::first-letter {
 .validate {
     text-align: center;
 }
-.small-info {
-    margin-left: 15px;
-    font-style: italic;
-}
 .big-info {
     color:#5f0d3b;
     font-weight: bold;
