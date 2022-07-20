@@ -27,7 +27,7 @@
 .container {
     margin-left: 10%;
     margin-right: 10%;
-    background-image: url(/sonytaNget.github.io/Image/silverware.jpg);
+    background-image: url(/lab1Recipe/Image/silverware.jpg);
     background-attachment: fixed;
 }
 .comment {
@@ -57,7 +57,7 @@ abbr {
     font-style: italic;
 }
 ul {
-    list-style-image: url(/sonytaNget.github.io/Image/pie_icon.gif);
+    list-style-image: url(/lab1Recipe/Image/pie_icon.gif);
 }
 .validate {
     border:0;
