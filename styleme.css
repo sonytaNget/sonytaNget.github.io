@@ -1,0 +1,47 @@
+.name {
+    font-family: Arial, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+.line {
+    width: 100%;
+    background-color: black;
+    height: 1px;
+    margin-top: 10px;
+}
+.container {
+    background-color: whitesmoke;
+}
+.head {
+    background-color: rgb(197, 192, 192);
+    padding-top: 30px;
+    text-align: center;
+}
+.info {
+    margin-left: 5%;
+}
+.emphasize {
+    color: #5f0d3b;
+}
+.title {
+    color: #028f76;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+p::first-letter {
+    font-size: 30px;
+}
+.validate {
+    text-align: center;
+}
+.small-info {
+    margin-left: 15px;
+    font-style: italic;
+}
+.big-info {
+    color:#5f0d3b;
+    font-weight: bold;
+}

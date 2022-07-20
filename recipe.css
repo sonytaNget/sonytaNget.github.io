@@ -1,0 +1,66 @@
+.header-title {
+    color: #A4A400;
+    background-color: #F0F0F0;
+    text-align: center;
+    font-family: 'Lucida Sans Unicode', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 22pt;
+    text-decoration: underline;
+}
+.ingredients, .directions, .user-comment, .links {
+    font-size: 18pt;
+    text-decoration: underline;
+    color: #A4A400;
+    background-color: #F0F0F0;
+}
+.line {
+    background-color: black;
+    height: 1px;
+    margin-bottom: 15pt;
+}
+.link-color {
+    color: #A4A400;
+}
+.big-directions {
+    margin-bottom: 15px;
+}
+.container {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-image: url(/sonytaNget.github.io/Image/silverware.jpg);
+    background-attachment: fixed;
+}
+.comment {
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #FFFFA8;
+}
+.align {
+    margin-right: 78%;
+    text-align: right;
+}
+p {
+    color: #404040;
+    font-size: 11pt;
+    font-family: Georgia, Garamond, serif;
+}
+.cake {
+    text-decoration: line-through;
+}
+abbr {
+    text-decoration: underline;
+}
+.bold-text {
+    font-weight: bold;
+}
+.comment > p {
+    font-style: italic;
+}
+ul {
+    list-style-image: url(/sonytaNget.github.io/Image/pie_icon.gif);
+}
+.validate {
+    border:0;
+    width:88px;
+    height:31px
+}
