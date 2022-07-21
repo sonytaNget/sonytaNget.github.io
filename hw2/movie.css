@@ -1,0 +1,101 @@
+body {
+    background-image: url(/sonytaNget.github.io/hw2/img/background.png);
+    margin: 0;
+    font-size: 8pt;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+.top {
+    background-image: url(/sonytaNget.github.io/hw2/img/bannerbg.png);
+    height: 50px;
+}
+.top img {
+    display: block;
+    margin: auto;
+}
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-family: Tahoma, Verdana, sans-serif;
+    text-shadow: 3px 3px #999999;
+}
+.title p {
+    font-size: 24pt;
+}
+.content-area {
+    width: 800px;
+    margin: auto;
+    border: 4px gray solid;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.content-area-left {
+    width: 550px;
+}
+.rooten {
+    height: 83px;
+    background-image: url(/sonytaNget.github.io/hw2/img/rbg.png);
+}
+.rooten span {
+    font-size: 48pt;
+    font-weight: bold;
+    color: red;
+}
+.rooten img, .review-first img, .review-second img{
+    float: left;
+}
+.review-first, .review-second {
+    width: 47%;
+    font-size: 8pt;
+    float: left;
+    margin-left: 2%;
+}
+.content-area p:nth-child(odd){ 
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-color: #E8DC9B;
+    padding: 8px;
+    font-weight: bold;
+}
+.content-area p:nth-child(even){ 
+    margin-bottom: 20pt;
+}
+p span {
+    font-style: italic;
+}
+.content-area image {
+    float: left;
+    margin: 5px;
+}
+.content-area-right {
+    background-color: #A2B964;
+    width: 250px;
+    font-size: 8pt;
+    font-family: Arial,  sans-serif;
+    float: right;
+    margin-top: -65pt
+}
+dt {
+    font-weight:bolder;
+    margin-top: 10pt
+}
+dl {
+    padding-left: 10pt;
+    padding-right: 10pt;
+}
+.footer {
+    clear: both;
+}
+.footer p{
+    background-color: #A2B964 !important;
+    padding: 5px !important;
+    margin: 0;
+    text-align: center;
+    border: 0 !important;
+    border-radius: 0 !important; 
+}
+.validator {
+    opacity: 0.5;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
