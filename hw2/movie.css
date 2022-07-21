@@ -1,11 +1,11 @@
 body {
-    background-image: url(/sonytaNget.github.io/hw2/img/background.png);
+    background-image: url(img/background.png);
     margin: 0;
     font-size: 8pt;
     font-family: Verdana, Tahoma, sans-serif;
 }
 .top {
-    background-image: url(/sonytaNget.github.io/hw2/img/bannerbg.png);
+    background-image: url(img/bannerbg.png);
     height: 50px;
 }
 .top img {
@@ -33,7 +33,7 @@ body {
 }
 .rooten {
     height: 83px;
-    background-image: url(/sonytaNget.github.io/hw2/img/rbg.png);
+    background-image: url(img/rbg.png);
 }
 .rooten span {
     font-size: 48pt;
