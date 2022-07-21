@@ -99,3 +99,6 @@ dl {
     right: 0;
     bottom: 0;
 }
+p img {
+    margin-right: 5px;
+}
