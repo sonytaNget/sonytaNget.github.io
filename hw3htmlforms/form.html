@@ -11,19 +11,19 @@
     <img src="img/logo.jpeg" alt="Logo">
     <fieldset>
         <legend>
-            <div class="signup">
+            <span class="signup">
                 New User Signup: 
-            </div>
+            </span>
         </legend><br>
         <form action="https://mumstudents.org/params.php">
             <label for="name">Name: </label>
             <input type="text" id="name" name="name" size="16"><br><br>
 
-            <label for="gener">Gender: </label>
-            <input type="radio" id="male" name="male" value="Male">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="female" value="Female" checked="checked">
-            <label for="female">Female</label><br><br>
+            <label>Gender: </label>
+            <input type="radio" id="male" name="gender" value="Male">
+             Male
+            <input type="radio" id="female" name="gender" value="Female" checked="checked">
+            Female<br><br>
 
             <label for="age">Age: </label>
             <input type="text" id="age" name="age" size="6" maxlength="2"><br><br>
@@ -39,9 +39,9 @@
                 <option value="Linux">Linux</option>
             </select><br><br>
 
-            <label for="os">Seeking age: </label>
+            Seeking age:
             <input type="text" id="min" name="min" size="6" maxlength="2" placeholder="min">
-            <label for="to">to</label>
+            to
             <input type="text" id="max" name="max" size="6" maxlength="2" placeholder="max"> <br>
 
             <input type="submit" value="Signup" class="Submit">
