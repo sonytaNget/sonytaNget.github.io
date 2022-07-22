@@ -4,6 +4,9 @@ a span {
 a {
     text-decoration: none;
 }
+.pic {
+    width: 80pt !important;
+}
 .Submit {
     margin-top: 15px;
     background-color: #feada7;
@@ -44,4 +47,7 @@ select#os {
 }
 input#min {
     margin-left: 47pt;
+}
+.footer img {
+    width: 150px;
 }
