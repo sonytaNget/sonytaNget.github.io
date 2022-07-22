@@ -1,0 +1,25 @@
+a span {
+    color: red;
+}
+a {
+    text-decoration: none;
+}
+.Submit {
+    margin-top: 15px;
+    background-color: pink;
+    
+}
+fieldset {
+    background-color: rgb(230, 215, 250);
+    border-radius: 10pt;
+    margin-right: 20%;
+}
+
+.signup {
+    background-color: white;
+    padding: 2px;
+    border: 1px solid black;
+}
+.validator {
+    margin-top: 15pt;
+}
