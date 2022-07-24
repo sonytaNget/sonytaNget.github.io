@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+		<!-- metadata -->
+		<meta charset="utf-8">
+		<meta name="author" content="Marty Stepp">
+		<meta name="description" content="Slides for the University of Washington's CSE 190 programming labs.">
+		<meta name="keywords" content="programming, java, jgrasp, building java programs, stepp, reges, washington, computer science">
+
+		<!-- style sheet links -->
+		<link rel="stylesheet" href="stylesheet/slides.css" type="text/css" media="screen" id="slideProj">
+		<link rel="stylesheet" href="decoratemytext_files/outline.css" type="text/css" media="screen" id="outlineStyle" disabled="">
+		<link rel="stylesheet" href="stylesheet/print.css" type="text/css" media="print" id="slidePrint">
+		<link rel="stylesheet" href="stylesheet/opera.css" type="text/css" media="projection" id="operaFix">
+
+		<!-- JS links -->
+		<script src="Scripts/slides.js" type="text/javascript"></script>
+		<script src="Scripts/slides2.js" type="text/javascript"></script>
+		<script src="Scripts/DrawingOverlay.js" type="text/javascript"></script>
+
+		<title>CS472 Lab 6: Decorate My Text</title>
+	<style media="screen, projection" id="s5ss">body {font-size: 28px !important;}</style></head>
+
+	<body style="display: block;">
+		<div class="layout">
+			<div id="controls"><form action="#" id="controlForm" undefined=""><div id="navLinks"><div id="navaLinks"><a accesskey="t" id="toggle" title="Print View" href="javascript:toggle();">Ø</a><a accesskey="z" id="prev" title="Previous Slide" href="javascript:go(-1);">«</a><a accesskey="x" id="next" title="Next Slide" href="javascript:go(1);">»</a></div><div id="navList"><select id="jumplist" onchange="go('j');"><option value="0 : Maharishi International University, CS472" selected="selected">0 : Maharishi International University, CS472</option><option value="1 : Today's lab">1 : Today's lab</option><option value="2 : Exercise : Create UI Elements (~15 min)">2 : Exercise : Create UI Elements (~15 min)</option><option value="3 : Exercise , output">3 : Exercise , output</option><option value="4 : Exercise : JavaScript alert (~5 min)">4 : Exercise : JavaScript alert (~5 min)</option><option value="5 : Exercise : Hello World Button (~10 min)">5 : Exercise : Hello World Button (~10 min)</option><option value="6 : Exercise : Bigger Decorations Button (~15 min)">6 : Exercise : Bigger Decorations Button (~15 min)</option><option value="7 : Exercise , output">7 : Exercise , output</option><option value="8 : Exercise : Bling Checkbox (~15 min)">8 : Exercise : Bling Checkbox (~15 min)</option><option value="9 : Exercise , output">9 : Exercise , output</option><option value="10 : Exercise : Font Timer (~10-15 min)">10 : Exercise : Font Timer (~10-15 min)</option><option value="11 : Exercise : (h4x0rz only): More Glitz">11 : Exercise : (h4x0rz only): More Glitz</option><option value="12 : If you finish them all...">12 : If you finish them all...</option></select></div></div></form></div>
+			<div id="currentSlide" style="visibility: hidden;"><span id="csHere">0</span> <span id="csSep">/</span> <span id="csTotal">12</span></div>
+			<div id="header"><div style="position: absolute; top: 0px; right: 0px; font-size: 10px;">Drawing:<input id="toggleOverlay" type="checkbox" title="Drawing"><button>Clear</button><input id="drawColor" type="color" value="#000000"></div></div>
+			
+		</div>
+
+		<div class="presentation">
+			<div class="slide" id="slide0" style="display: block;">
+				<h1>Maharishi International University, CS472</h1>
+				<h2>Lab 6: Decorate My Text</h2>
+
+				<p class="license">
+					Except where otherwise noted, the contents of this document are
+					Copyright 2012 Marty Stepp, Jessica Miller, and Victoria Kirst.
+
+					All rights reserved.
+					Any redistribution, reproduction, transmission, or storage of part
+					or all of the contents in any form is prohibited without the author's
+					expressed written permission.
+				</p>
+
+				<p class="license">
+					<em>
+						original lab idea and code by Victoria Kirst and Jeff Prouty; 
+						revised by Brian Le, Katlyn Edwards, Roy McElmurry IV, and Marty Stepp
+					</em>
+				</p>
+
+				<div class="w3c">
+					<a href="http://validator.w3.org/check?uri=https://sonytaNget.github.io"><img src="img/w3c-html.png" alt="Valid HTML5"></a>
+					<a href="http://jigsaw.w3.org/css-validator/validator?uri=https://sonytaNget.github.io/hw2/"><img src="img/w3c-css.png" alt="Valid CSS"></a>
+        			<a href="http://mumstudents.org/jshint/referer.php"><img src="img/jshint-small.png" alt="Valid JS"></a>                                
+				</div>
+			<canvas class="drawingoverlay" id="drawingoverlay_slide0" style="position: absolute; top: 0px; left: 0px; display: none;" width="1920" height="1080"></canvas></div>
+
+
+<div class="slide" id="slide1" style="display: none;">
+	<h1>Today's lab</h1>
+
+	<p>
+		Today you'll write a page where the user can type text into a box, and
+ by clicking on UI controls, the user can decorate the text by giving it
+ funny styling.
+	</p>
+
+	<p>
+		The HTML page <code>decoratemytext.html</code> contains a basic HTML shell and page header.  This skeleton already links to a CSS file <code>decoratemytext.css</code> that defines all the styles you need.  You do not have to write any CSS code today.
+	</p>
+
+	<p>
+		You will write a JavaScript file <code>decoratemytext.js</code> that will manipulate the text.
+	</p>
+
+	<p>
+		Download the HTML file below to get started:
+	</p>
+
+	<ul>
+		<li>
+			<a class="popup" href="/sonytaNget.github.io/hw4decoratemytextlab/decoratemytext.html" ><img src="img/icon_html.gif" class="icon" alt="html">
+			decoratemytext.html</a>
+		</li>
+	</ul>
+<canvas class="drawingoverlay" id="drawingoverlay_slide1" style="position: absolute; top: 0px; left: 0px; display: none;" width="1920" height="1080"></canvas></div>
+
+
+
+<div class="slide" id="slide2" style="display: none;">
+	<h1>Exercise <span class="exercisenumber"></span>: Create UI Elements (~15 min)</h1>
+
+	<p class="readbeforestarting">
+		(See example screenshot on next slide.)
+	</p>
+
+	<p>
+		The first task is to expand <code>decoratemytext.html</code> by adding UI controls. Add HTML code for the following:
+	</p>
+
+	<ul>
+		<li>
+			A field for users to enter large (multi-line) amounts of text.
+			<ul>
+				<li>
+					It should be 4 rows by 30 columns in size.
+				</li>
+				<li>
+					Wrap it in a bordered field set box with the label "Text".
+				</li>
+			</ul>
+		</li>
+		<li>
+			Add a second bordered field set box labeled "Decoration" that contains the following controls:
+			<ul>
+				<li>
+					A button labeled: Bigger Decorations!
+				</li>
+				<li>
+					A checkbox labeled "Bling"
+				</li>
+			</ul>
+		</li>
+
+		<li><strong>NOTE: Controls are sometimes used in forms; but you must not use the <code>form</code> tag on your page.</strong></li>
+	</ul>
+<canvas class="drawingoverlay" id="drawingoverlay_slide2" style="position: absolute; top: 0px; left: 0px; display: none;" width="1920" height="1080"></canvas></div>
+
+
+
+<div class="slide" id="slide3" style="display: none;">
+	<h1>Exercise <span class="exercisenumber noincrement"></span>, output</h1>
+
+	<p>
+		Your page should look like this:
+	</p>
+
+	<div class="outputimagearea">
+		<img src="img/output1-controls.png" alt="expected output">
+	</div>
+<canvas class="drawingoverlay" id="drawingoverlay_slide3" style="position: absolute; top: 0px; left: 0px; display: none;" width="1920" height="1080"></canvas></div>
+
+
+
+<div class="slide" id="slide4" style="display: none;">
+	<h1>Exercise <span class="exercisenumber"></span>: JavaScript <code>alert</code> (~5 min)</h1>
+
+	<p>
+		 Now you'll write a bit of JavaScript testing code that pops up an <code>alert</code>
+ box.  This is just a test to make sure that your browser is running 
+your JavaScript file, before we move on to tougher exercises.
+	</p>
+
+	<div style="float: right; margin-left: 1em">
+		<img src="img/output2-helloworld.png" alt="hello world">
+	</div>
+
+	<ul>
+		<li>
+			Create a new file and save it as <code>decoratemytext.js</code>.
+		</li>
+
+		<li>
+			Put the following line of code into the file:
+
+			<pre>alert("Hello, world!");</pre>
+		</li>
+
+		<li>
+			Link your HTML page to your JavaScript file using a <code>script</code> tag.
+		</li>
+
+		<li>
+			Refresh your page in the browser.  Do you see the <code>alert</code> message?
+
+			<ul>
+				<li>If so, move on.</li>
+				<li>If not, double-check your <code>script</code> tag syntax or ask a TA for help.</li>
+			</ul>
+		</li>
+	</ul>
+<canvas class="drawingoverlay" id="drawingoverlay_slide4" style="position: absolute; top: 0px; left: 0px; display: none;" width="1920" height="1080"></canvas></div>
+
+
+
+<div class="slide" id="slide5" style="display: none;">
+	<h1>Exercise <span class="exercisenumber"></span>: Hello World Button (~10 min)</h1>
+
+	<p>
+		Now let's set up a very basic JS event handler.  Modify your JS code and HTML so that the "Hello, world!" <code>alert</code> message won't pop up until the user clicks the "Bigger Decorations!" button.
+	</p>
+
+	<div style="float: right; margin-left: 1em">
+		<img src="img/output2-helloworld.png" alt="hello world">
+	</div>
+
+	<ul>
+		<li>
+			Modify your JS file to wrap the <code>alert</code> into a function.
+		</li>
+
+		<li>
+			Add an <code>onclick</code> event handler for the "Bigger Decorations!" button that calls your new function.
+		</li>
+
+		<li>
+			Refresh your page in the browser.  Click the button.  Do you see the <code>alert</code>?
+
+			<ul>
+				<li>If so, move on.</li>
+				<li>If not, remember that the DOM may not be loaded yet, add an <code>onload</code> handler to the global <code>window</code> object.</li>
+				<li>Still not, double-check your <code>onclick</code> tag syntax and function, or ask a TA for help.</li>
+			</ul>
+		</li>
+	</ul>
+<canvas class="drawingoverlay" id="drawingoverlay_slide5" style="position: absolute; top: 0px; left: 0px; display: none;" width="1920" height="1080"></canvas></div>
+
+
+
+<div class="slide" id="slide6" style="display: none;">
+	<h1>Exercise <span class="exercisenumber"></span>: Bigger Decorations Button (~15 min)</h1>
+
+	<p class="readbeforestarting">
+		(See example screenshot on next slide.)
+	</p>
+
+	<p>
+		Modify your JS code so that when the user clicks "Bigger Decorations!", the text in the text area will get larger.
+	</p>
+
+	<ul>
+		<li>
+			Make sure your text area has an <code>id</code> attribute so your JS code can talk to it.
+		</li>
+
+		<li>
+			Modify your JS function so that it now changes the text area's font size to <strong>24pt</strong> .
+		</li>
+
+		<li>
+			<em>Hint:</em> You can use the following Javascript syntax for accessing an element by ID and changing a style:
+
+			<pre style="margin-bottom: 0.5em">document.getElementById("elementID").style.propertyName = "value";
+</pre>
+
+			<ul>
+				<li>Use proper units, such as "4em", and proper naming conventions, such as <code>background-color</code> .</li>
+			</ul>
+		</li>
+	</ul>
+<canvas class="drawingoverlay" id="drawingoverlay_slide6" style="position: absolute; top: 0px; left: 0px; display: none;" width="1920" height="1080"></canvas></div>
+
+
+
+<div class="slide" id="slide7" style="display: none;">
+	<h1>Exercise <span class="exercisenumber noincrement"></span>, output</h1>
+
+	<p>
+		The text should look like this after the button is clicked:
+	</p>
+
+	<div>
+		<img src="img/output4-biggerText.png" alt="expected output">
+	</div>
+<canvas class="drawingoverlay" id="drawingoverlay_slide7" style="position: absolute; top: 0px; left: 0px; display: none;" width="1920" height="1080"></canvas></div>
+
+
+
+<div class="slide" id="slide8" style="display: none;">
+	<h1>Exercise <span class="exercisenumber"></span>: Bling Checkbox (~15 min)</h1>
+
+	<p class="readbeforestarting">
+		(See example screenshot on next slide.)
+	</p>
+
+	<p>
+		Add an event handler so that when the user checks "Bling", the text area will receive some styles.
+	</p>
+
+	<ul>
+		<li>
+			Add an <code>onchange</code> on the checkbox that calls a function that pops up an <code>alert</code>.
+		</li>
+
+		<li>
+			Modify your new function to set the text area's font weight to <strong>bold</strong>.
+
+			<ul>
+				<li>
+					You can see if a checkbox is checked by examining its <code>checked</code> attribute.  (Give it an <code>id</code>.)
+				</li>
+				<li>
+					When the box is unchecked, the font weight should go back to normal.
+				</li>
+				<li>
+					<em>Hint:</em> You can use the following jQuery syntax for accessing an element's attributes:
+
+			<pre style="margin-bottom: 0.5em">$("<var>elementID</var>").attr("<var>attributeName</var>")
+</pre>
+				</li>
+			</ul>
+		</li>
+
+		<li>
+			Once the bold part works, add the following styles to the text when the box is checked:
+
+			<ul>
+				<li>
+					change its color to green
+				</li>
+				<li>
+					underline the text (this is the CSS <code>text-decoration</code> property)
+				</li>
+			</ul>
+		</li>
+	</ul>
+<canvas class="drawingoverlay" id="drawingoverlay_slide8" style="position: absolute; top: 0px; left: 0px; display: none;" width="1920" height="1080"></canvas></div>
+
+
+
+<div class="slide" id="slide9" style="display: none;">
+	<h1>Exercise <span class="exercisenumber noincrement"></span>, output</h1>
+
+	<p>
+		Your page should look like this when the box is checked:
+	</p>
+
+	<div>
+		<img src="img/output5-bling.png" alt="expected output">
+	</div>
+<canvas class="drawingoverlay" id="drawingoverlay_slide9" style="position: absolute; top: 0px; left: 0px; display: none;" width="1920" height="1080"></canvas></div>
+
+
+
+
+
+
+
+<div class="slide" id="slide10" style="display: none;">
+	<h1>Exercise <span class="exercisenumber"></span>: Font Timer (~10-15 min)</h1>
+
+	<ul>
+		<li>
+			Make it so that when the "Bigger Decorations!" button is clicked, rather than setting the font size to 24pt, you'll make it <strong>2pt larger</strong> than its current size.
+
+			<ul>
+				<li>
+					Read the font size such as "12pt" and change it to a larger one like "14pt".
+				</li>
+
+				<li>
+					Use the text area's <code>.css("CSS Attribute")</code> property to get the current font size.
+				</li>
+
+
+				<li>
+					You may want to use the <code>parseInt</code> function to help you solve this.
+				</li>
+			</ul>
+		</li>
+
+		<li>
+			Once that works, make it use a <strong>timer</strong>.
+
+			<ul>
+				<li>
+					Now a single click should continually increase the font size by +2pt every 500 ms.
+				</li>
+
+				<li>
+					Use the <code>setInterval</code> function.  The timer should call the function you just wrote.
+				</li>
+			</ul>
+		</li>
+	</ul>
+<canvas class="drawingoverlay" id="drawingoverlay_slide10" style="position: absolute; top: 0px; left: 0px; display: none;" width="1920" height="1080"></canvas></div>
+
+
+
+<div class="slide" id="slide11" style="display: none;">
+	<h1>Exercise <span class="exercisenumber"></span>: (h4x0rz only): More Glitz</h1>
+
+	<p>
+		 If you finish all previous exercises, try adding any of the following:
+	</p>
+
+	<ul>
+		<li>
+			When "Bling" is checked, also set the page to have a background image:
+
+			<pre style="font-size: smaller">http://www.cs.washington.edu/education/courses/190m/CurrentQtr/labs/6/hundred-dollar-bill.jpg
+</pre>
+		</li>
+
+		<li>
+			Add an "Igpay Atinlay" button that converts the text to Pig Latin. The rules:
+
+			<ol>
+				<li>
+					Words beginning in a consonant (or consonant cluster) have that consonant (or consonant cluster) moved to the end and <em>-ay</em> tacked on following.
+				</li>
+
+				<li>
+					Words beginning in a vowel simply have <em>-ay</em> tacked on the end.
+				</li>
+			</ol>
+		</li>
+
+		<li>
+			Add a "Malkovitch" button that causes words of &gt;= 5 characters in length to be replaced with the word "Malkovich".
+
+			<ul>
+				<li>
+					(Inspired by <a class="popup" href="http://lfw.org/jminc/index.html" target="_blank">Malkovitch Mediator</a> by Ka-Ping Yee, and film <a href="http://www.youtube.com/watch?v=Ur3CQE8xB3c">Being John Malkovitch</a>)
+				</li>
+			</ul>
+
+		</li>
+	</ul>
+<canvas class="drawingoverlay" id="drawingoverlay_slide11" style="position: absolute; top: 0px; left: 0px; display: none;" width="1920" height="1080"></canvas></div>
+
+
+
+<div class="slide" id="slide12" style="display: none;">
+	<h1>If you finish them all...</h1>
+
+	<p>
+		If you finish all the exercises, you can add any other content or code (or bling!) you like to your page.
+	</p>
+
+	<p>
+		<strong>Great work!</strong>
+	</p>
+<canvas class="drawingoverlay" id="drawingoverlay_slide12" style="position: absolute; top: 0px; left: 0px; display: none;" width="1920" height="1080"></canvas></div>
+
+		</div><!-- end div class="presentation" -->
+
+
+		<!-- Google Analytics 
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+					document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				}
+			}
+		</script>
+
+		<script type="text/javascript">
+			if (location.href.match(/http:\/\//)) {
+				if (!location.href.match(/localhost/)) {
+					var pageTracker = _gat._getTracker("UA-2729135-5");
+					pageTracker._initData();
+					pageTracker._trackPageview();
+				}
+			}
+		</script>-->
+	
+
+</body></html>
