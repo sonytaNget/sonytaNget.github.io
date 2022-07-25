@@ -25,7 +25,7 @@ window.onload = function() {
     // Area Checkbox Bling
     var checkboxBling = document.getElementById("checkBoxBling");
     checkboxBling.style.display = "block";
-    
+
     // Checkbox Bling
     var checkBling = document.getElementById("bling");
     checkBling.onchange = showAlertOnBling;
@@ -68,8 +68,7 @@ window.onload = function() {
     }
 
     function changeBackground() {
-        console.log("Hi");
-        txtAreaItem.style.backgroundImage = "url(/sonytaNget.github.io/lab1Recipe/Image/background.gif)";
+        document.getElementById("body").style.backgroundImage = "url(/sonytaNget.github.io/lab1Recipe/Image/background.gif)";
     }
      
     function biggerText() {
