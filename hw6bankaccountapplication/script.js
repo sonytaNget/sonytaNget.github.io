@@ -5,19 +5,22 @@ window.onload = function() {
     var balanceElement = document.getElementById("deposit");
 
     // Button create account
-    var btnCreateAccount = document.getElementById("createAcc");
-    btnCreateAccount.onclick = addAndDisplayAccountList;
+    var btnCreateAccountElement = document.getElementById("createAcc");
+    btnCreateAccountElement.onclick = addAndDisplayAccountList;
 
     // Button deposit
-    var btnDeposit = document.getElementById("depositBtn");
-    btnDeposit.onclick = bringNewPage;
+    var btnDepositElement = document.getElementById("depositBtn");
+    btnDepositElement.onclick = bringDepositNewPage;
 
     // Button debit
-    var btnDebit = document.getElementById("debit");
-    btnDeposit.onclick = bringNewPage;
+    var btnDebitElement = document.getElementById("debit");
+    btnDebitElement.onclick = bringDebitNewPage;
 
     // TextArea List
     var txtAreaList = document.getElementById("list");
+
+    var selectAccountElement = document.getElementById("account");
+
    
     function addAndDisplayAccountList() {
 
@@ -45,13 +48,33 @@ window.onload = function() {
         txtAreaList.value = result;
     }
 
-    function bringNewPage() {
+    function getAccountName() {
+        const accountInfoList = Bank.accountInfoList;
+
+        var result = "";
+
+        for (let i=0; i<accountInfoList.length; i++) {
+            var account = accountInfoList[i];
+            result = account.accountName;
+            selectAccountElement.options[selectAccountElement.options.length] = new Option(result, i);
+        }
+    }
+
+    function bringDepositNewPage(){
+        bringNewPage("deposit");
+    }
+
+    function bringDebitNewPage() {
+        bringNewPage("debit");
+    }
+
+    function bringNewPage(action) {
         window.open("https://sonytanget.github.io/hw6bankaccountapplication/newPage.html");
+        getAccountName()
+        localStorage.setItem("action", action);
     }
 
 }
-
-
 
 class Account {
 

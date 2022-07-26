@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account List</title>
     <link href="style.css" type="text/css" rel="stylesheet" />
-	<script src="script.js" type="text/javascript"></script>
+	<script src="newPage.js" type="text/javascript"></script>
+    <!-- <script src="script.js" type="text/javascript"></script> -->
 </head>
 <body>
    
-    <h2>Deposit or Debit Page</h2>
+    <h2 id="title">Deposit or Debit Page</h2>
 
     <form>
 
@@ -23,7 +24,7 @@
 
     <div>
         <label for="amount">Enter Amount:</label>
-        <input type="text" id="amount" name="amount">
+        <input type="number" id="amount" name="amount">
     </div>
     
     <button id="submit" disabled>Submit</button>

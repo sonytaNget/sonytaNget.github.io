@@ -10,3 +10,7 @@ button {
     margin-bottom: 10pt;
     margin-right: 10pt;
 }
+
+#amount {
+    margin-left: 16pt;
+}
