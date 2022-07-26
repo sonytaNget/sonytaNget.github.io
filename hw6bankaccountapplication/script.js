@@ -19,11 +19,11 @@ window.onload = function() {
     // TextArea List
     var txtAreaList = document.getElementById("list");
 
-    var selectAccountElement = document.getElementById("account");
     debugger;
     Bank.accountInfoList = JSON.parse(localStorage.getItem("accountList"));
     var result = "";
 
+    debugger;
     var accountInfoList = Bank.accountInfoList;
     for(let i = 0; i < accountInfoList.length; i++) {
         var account = accountInfoList[i];
@@ -35,6 +35,12 @@ window.onload = function() {
 
         addAccount();
         displayAccountList();
+        clearTextInput();
+    }
+
+    function clearTextInput() {
+        accountNameElement.value = "";
+        balanceElement.value ="";
     }
 
     function addAccount() {
@@ -69,7 +75,7 @@ window.onload = function() {
 
         localStorage.setItem("accountList", JSON.stringify(Bank.accountInfoList));
         localStorage.setItem("action", action);
-        window.open("/sonytaNget.github.io/hw6bankaccountapplication/newPage.html");
+        window.open("https://sonytanget.github.io/hw6bankaccountapplication/newPage.html");
     }
 
 }
