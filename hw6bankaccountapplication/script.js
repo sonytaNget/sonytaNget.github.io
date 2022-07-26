@@ -46,7 +46,7 @@ window.onload = function() {
     }
 
     function bringNewPage() {
-        window.open("");
+        window.open("https://sonytanget.github.io/hw6bankaccountapplication/newPage.html");
     }
 
 }
