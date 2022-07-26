@@ -2,29 +2,53 @@ window.onload = function() {
 
     // Button Submit
     var btnSubmitElement = document.getElementById("submit");
-
-    // DropDown List Accounts
-    var dropdownElement = document.getElementById("account");
-    dropdownElement.onchange = enableButton;
+    btnSubmitElement.onclick = makeTransaction;
 
     // Input Amount
     var amountElement = document.getElementById("amount");
 
     var titleElement = document.getElementById("title");
-    // titleElement.innerHTML = ;
-    console.log(localStorage.getItem("action"));
+    titleElement.innerText = localStorage.getItem("action");
+
+    // DropDown List Accounts
+    var dropdownElement = document.getElementById("accountName");
+    dropdownElement.onchange = enableButton;
+    
+    const accountInfoList = JSON.parse(localStorage.getItem("accountList"));
+
+    for(let i = 0; i < accountInfoList.length; i++) {
+        var account = accountInfoList[i];
+        var option = document.createElement('option');
+        option.text = option.value = account.accountName;
+        dropdownElement.add(option, 0);
+    }
+   
 
     function enableButton() {
 
-        btnSubmitElement.disabled = false;
-        makeTransaction()
+        if (dropdownElement.value !== "none") {
+            btnSubmitElement.disabled = false;
+        } else {
+            btnSubmitElement.disabled = true;
+        }
     }
     
     function makeTransaction() {
 
-        var text = dropdownElement.options[dropdownElement.selectedIndex].text;
-        console.log(text);
-        console.log(amountElement.value);
+        for(let i = 0; i < accountInfoList.length; i++) {
+            const account = accountInfoList[i];
+            if (account.accountName === dropdownElement.value) {
+                var action = localStorage.getItem("action");
+                if (action === "Debit") {
+                    account.balance = +account.balance - +amountElement.value;
+                } else if (action === "Deposit"){
+                    account.balance = +account.balance + +amountElement.value;
+                }
+                break;
+            }
+        }
+        localStorage.setItem("accountList", JSON.stringify(accountInfoList));
+        window.open("/sonytaNget.github.io/hw6bankaccountapplication/index.html");
     }
 
 }

@@ -20,7 +20,16 @@ window.onload = function() {
     var txtAreaList = document.getElementById("list");
 
     var selectAccountElement = document.getElementById("account");
+    debugger;
+    Bank.accountInfoList = JSON.parse(localStorage.getItem("accountList"));
+    var result = "";
 
+    var accountInfoList = Bank.accountInfoList;
+    for(let i = 0; i < accountInfoList.length; i++) {
+        var account = accountInfoList[i];
+        result += "Account name: " + account.accountName + " Balance: " + account.balance + "\n";
+    }
+    txtAreaList.value = result;
    
     function addAndDisplayAccountList() {
 
@@ -48,68 +57,23 @@ window.onload = function() {
         txtAreaList.value = result;
     }
 
-    function getAccountName() {
-        const accountInfoList = Bank.accountInfoList;
-
-        var result = "";
-
-        for (let i=0; i<accountInfoList.length; i++) {
-            var account = accountInfoList[i];
-            result = account.accountName;
-            selectAccountElement.options[selectAccountElement.options.length] = new Option(result, i);
-        }
-    }
-
     function bringDepositNewPage(){
-        bringNewPage("deposit");
+        bringNewPage("Deposit");
     }
 
     function bringDebitNewPage() {
-        bringNewPage("debit");
+        bringNewPage("Debit");
     }
 
     function bringNewPage(action) {
-        window.open("https://sonytanget.github.io/hw6bankaccountapplication/newPage.html");
-        getAccountName()
+
+        localStorage.setItem("accountList", JSON.stringify(Bank.accountInfoList));
         localStorage.setItem("action", action);
+        window.open("/sonytaNget.github.io/hw6bankaccountapplication/newPage.html");
     }
 
 }
 
-class Account {
 
-    // #accountName;
-    // #balance;
 
-    constructor(accountName, balance) { 
-        this.accountName = accountName;
-        this.balance = balance;
-    }
-
-}
-
-class Bank {
-
-    static accountInfoList = [];
-
-    createAccount(accountName, depositBalance) { 
-        // debugger;
-        const account = new Account(accountName, depositBalance);
-        Bank.accountInfoList.push(account);
-        // this.showList();
-    }
-
-    showList() {
-        debugger;
-        var listAccountInfo = Bank.accountInfoList;
-        var result = "";
-        if (listAccountInfo.length > 0) {
-            for (let i=0; i<listAccountInfo.length; i++) {
-                var account = listAccountInfo[i];
-                result += "Account name " + account.accountName + " Balance " + account.balance;
-            }
-        }
-        return result;
-    }
-}
 
