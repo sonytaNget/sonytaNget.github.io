@@ -40,6 +40,9 @@ window.onload = function() {
             if (account.accountName === dropdownElement.value) {
                 var action = localStorage.getItem("action");
                 if (action === "Debit") {
+                    if (parseFloat(amountElement.value) > parseFloat(account.balanc)) {
+                        alert("Sorry, insufficient transaction");
+                    }
                     account.balance = +account.balance - +amountElement.value;
                 } else if (action === "Deposit"){
                     account.balance = +account.balance + +amountElement.value;
@@ -48,7 +51,7 @@ window.onload = function() {
             }
         }
         localStorage.setItem("accountList", JSON.stringify(accountInfoList));
-        window.open("/sonytaNget.github.io/hw6bankaccountapplication/index.html");
+        window.open("https://sonytaNget.github.io/hw6bankaccountapplication/index.html");
     }
 
 }
