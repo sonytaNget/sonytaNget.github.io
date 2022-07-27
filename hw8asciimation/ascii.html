@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ASCIImation</title>
+    <link href="ascii.css" type="text/css" rel="stylesheet" />
+	<script src="animations.js" type="text/javascript"></script>
+    <script src="ascii.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1>CS472: ASCII Animation Viewer</h1>
+    <textarea name="" id="" cols="80" rows="20"></textarea>
+    <div class="groupControl">
+        <div class="controlGroup">
+            <span> Play Controls:</span>
+            <button id="startButton">Start</button>
+            <button id="stopButton">Stop</button>
+        </div>
+        <div class="controlGroup">
+            <span> Animation:</span>
+            <select name="animation" id="animation">
+                <option value="blank">Blank</option>
+                <option value="custom">Custom</option>
+                <option value="exercise">Exercise</option>
+                <option value="juggler">Juggler</option>
+                <option value="bike">Bike</option>
+                <option value="dive">Dive</option>
+            </select>
+        </div>
+        <div class="controlGroup">
+            <span> Size:</span>
+            <select name="size" id="size">
+                <option value="tiny">Tiny</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="extraLarge">Extra Large</option>
+                <option value="xxl">XXL</option>
+            </select>
+        </div>
+        <div class="controlGroup">
+            <span> Speed:</span>
+            <input type="checkbox" id="turbo">
+            <label for="turbo">Turbo</label>
+        </div>
+    </div>
+</body>
+</html>

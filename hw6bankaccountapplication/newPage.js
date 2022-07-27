@@ -13,7 +13,7 @@ window.onload = function() {
     // DropDown List Accounts
     var dropdownElement = document.getElementById("accountName");
     dropdownElement.onchange = enableButton;
-    
+
     const accountInfoList = JSON.parse(localStorage.getItem("accountList"));
 
     for(let i = 0; i < accountInfoList.length; i++) {

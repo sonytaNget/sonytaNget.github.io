@@ -1,0 +1,9 @@
+h1 {
+    text-align: center;
+}
+div, span{
+    margin-left: 20pt;
+}
+.answer{
+    color: green;
+}

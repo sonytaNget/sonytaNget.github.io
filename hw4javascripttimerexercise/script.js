@@ -25,7 +25,7 @@ window.onload = function() {
     
     var x = myfunc(2, 3);
     var y = myfunc;
-   
+
     function alertX() {
         alert(x);
     }
