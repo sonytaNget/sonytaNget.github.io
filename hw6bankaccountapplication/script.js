@@ -23,12 +23,14 @@ window.onload = function() {
     Bank.accountInfoList = JSON.parse(localStorage.getItem("accountList"));
     var result = "";
 
-    debugger;
     var accountInfoList = Bank.accountInfoList;
-    for(let i = 0; i < accountInfoList.length; i++) {
-        var account = accountInfoList[i];
-        result += "Account name: " + account.accountName + " Balance: " + account.balance + "\n";
+    if (accountInfoList != null) {
+        for(let i = 0; i < accountInfoList.length; i++) {
+            var account = accountInfoList[i];
+            result += "Account name: " + account.accountName + " Balance: " + account.balance + "\n";
+        }
     }
+
     txtAreaList.value = result;
    
     function addAndDisplayAccountList() {
