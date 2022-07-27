@@ -22,6 +22,8 @@ textarea {
 
 .groupControl {
     display: inline-block;
+    margin-left: 30pt;
+    /* margin-right: auto; */
 }
 
 .controlGroup {
