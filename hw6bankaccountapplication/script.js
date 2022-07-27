@@ -1,5 +1,7 @@
 window.onload = function() {
 
+    localStorage.clear();
+
     // Input Name and Balance
     var accountNameElement = document.getElementById("name");
     var balanceElement = document.getElementById("deposit");
@@ -19,8 +21,10 @@ window.onload = function() {
     // TextArea List
     var txtAreaList = document.getElementById("list");
 
-    debugger;
-    Bank.accountInfoList = JSON.parse(localStorage.getItem("accountList"));
+    if (localStorage.getItem("accountList") !== null) {
+        Bank.accountInfoList = JSON.parse(localStorage.getItem("accountList"));
+    }
+
     var result = "";
 
     var accountInfoList = Bank.accountInfoList;
