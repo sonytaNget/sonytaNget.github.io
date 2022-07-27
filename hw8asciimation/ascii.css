@@ -1,29 +1,41 @@
 body {
     background-color: #CCCCFF;
-    font-family: sans-serif;
     font-size: 14pt;
     font-weight: bold;
-} 
-h1 {
+    margin: auto;
     text-align: center;
-    font-size: 32pt;
-    font-weight: bold;
-}
-textarea {
-    height: 400px;
-    width: 90%;
-    font-family: monospace;
-    font-size: 12pt;
-    font-weight: bold;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.groupControl {
+h1 {
+    font-size: 32pt;
+}
+
+select {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+button {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.validator {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+textarea {
+    width: 90%;
+    height: 400px;
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.controlGroupContainerDiv {
     display: inline-block;
-    margin-left: 30pt;
-    /* margin-right: auto; */
 }
 
 .controlGroup {
@@ -34,25 +46,12 @@ textarea {
     padding: 15px;
     margin: 5px;
 }
+
 .controlGroup > span {
     position: absolute;
     top: -10pt;
     left: 8pt;
     background-color: #CCCCFF;
 }
-button {
-    font-size: 14pt;
-    font-weight: bold;
-}
-option {
-    font-weight: normal;
-    display: block;
-    white-space: nowrap;
-    min-height: 1.2em;
-    padding: 0px 2px 1px;
-}
-select {
-    font-size: 14pt;
-    font-weight: bold;
-}
+
 
