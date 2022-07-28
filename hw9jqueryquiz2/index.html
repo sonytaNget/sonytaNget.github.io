@@ -20,6 +20,14 @@
                 //code fragment 3
                 $("li").each(function(idx) {
                 $(this).css(“color”, “yellow”); });
+                
+                [Answer]: The following 3 code fragments are equivalent because they produce the same output (changes "li" element to yellow). All these 3 
+                fragments are looping through "li" elements, the only differents are:
+
+                1. Fragment one takes 2 arguments (index and element). During the looping process, it changes the color of every "li" based on its element from argument.
+                2. Fragment two does not have any argument. During the looping process, keyword "this" refers to current loop "li" element. It changes the color of each "li" element.
+                3. Fragment three takes 1 argument (index). During the looping process, keyword "this" refers to current loop "li" element. It changes the color of each "li" element without using any index from its argument.
+
             </pre>
         </div>
         <div class="second">
@@ -36,7 +44,7 @@
                 &lt;/div&gt;
                 &lt; !—INSERT YOUR JQUERY CODE HERE - - &gt;
                 &lt;script&gt;
-                $("div:has(ul)").css("color", "blue");
+                $("div ul").css('color', 'blue');      
                 &lt;/script&gt;
                 &lt;/body&gt;
             </pre>
@@ -46,21 +54,21 @@
             element.
             <pre>
                 &lt;div&gt;&lt;h1&gt;JQuery Core&lt;/h1&gt;&lt;/div&gt;
-                HTML:
+                HTML: <br><br>
                 &lt;!DOCTYPE html&gt;
-                &lt;html&gt;
-                &lt;head&gt;
-                &lt;meta charset="utf-8"&gt;
-                &lt;title&gt;JS Bin&lt;/title&gt;
-                &lt;script src="http://code.jquery.com/jquery-1.9.1.js"&gt;&lt;/script&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-            
-                &lt;/body&gt;
-                &lt;script src="local_path.js"&gt;&lt;/script&gt;
-                &lt;/html&gt; 
-                JS //local_path.js
-                $("body").append("&lt;div&gt;&lt;h1&gt;JQuery Core&lt;/h1&gt;&lt;/div&gt;");  
+                    &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="utf-8"&gt;
+                        &lt;title&gt;JS Bin&lt;/title&gt;
+                        &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+                        &lt;script&gt;
+                            $("body").append("&lt;div&gt;&lt;h1&gt;JQuery Core&lt;/h1&gt;&lt;/div&gt;");  
+                        &lt;/script&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                
+                    &lt;/body&gt;
+                    &lt;/html&gt; 
             </pre>  
         </div>
 </body>

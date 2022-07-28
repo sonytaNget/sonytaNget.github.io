@@ -1,9 +1,11 @@
 'esversion: 6';
 
-var textArea, startButton, stopButton, animationSelector, sizeSelector, setTimeOutID, turboChecker;
-var animationSpeed = 250;
 
-var initVariables = () => {
+window.onload = () => {
+
+    var textArea, startButton, stopButton, animationSelector, sizeSelector, setTimeOutID, turboChecker;
+    var animationSpeed = 250;
+    
     textArea = document.getElementById("textArea");
     startButton = document.getElementById("startButton");
     stopButton = document.getElementById("stopButton");
@@ -12,10 +14,6 @@ var initVariables = () => {
     turboChecker = document.getElementById("turbo");
 
     stopButton.disabled = true;
-};
-
-window.onload = () => {
-    initVariables();
     console.log("it is here");
 
     // -------- Set Value from Animation -------
