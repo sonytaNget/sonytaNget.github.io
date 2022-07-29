@@ -35,6 +35,10 @@
             &lt;/script&gt;
 
             &lt;!—INSERT YOUR JQUERY CODE HERE - -&gt;
+            <div class="answer">
+                var firstValue = $("p:first").text();
+                $("p:last").text(firstValue);
+            </div>
             &lt;/script&gt;     
             &lt;/body&gt;  
             &lt;/html&gt;     
@@ -61,6 +65,10 @@
                 &lt;li class="item-iii"&gt;III&lt;/li&gt;   
             &lt;/ul&gt;  
         </pre>
+        <div class="answer">
+            <strong>Answer</strong><br>
+            $(".level-2").css("background-color", "red");
+        </div>
     </div>
     <div class="content">
         3. Write jQuery code to select the element that comes immediately before item three and change its
@@ -85,7 +93,7 @@
         "Mashed Potatoes" in the vegetarian version. You may assume there is a class "turkey" that identifies
         these items in the list. Describe the changes to the Javascript (jQuery) code to implement this new
         requirement.
-        <div class="answer">
+        <div class="answer"><br>
             <strong>Answer</strong><br>
             $("li.turkey").replaceWith("&lt;li class="mashed_potatoes">Mashed Potatoes &lt/li&gt;")
         </div>
@@ -101,7 +109,9 @@
             $(document).ready(function(){
 
                 &lt;!—INSERT YOUR JQUERY CODE HERE - - &lt;
-
+                <div class="answer">
+                    $("span").parentsUntil("div").css("color" , "green")
+                </div>
             });
             &lt;/script&gt;
             &lt;/head&gt;
