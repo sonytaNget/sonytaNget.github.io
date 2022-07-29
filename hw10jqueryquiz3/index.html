@@ -74,6 +74,10 @@
                 &lt;li&gt;list item 5&lt;/li&gt;
             &lt;/ul&gt;    
         </pre>
+        <div class="answer">
+            <strong>Answer</strong><br>
+            $( "li.third-item" ).prev().css( "background-color", "blue" );
+        </div>
     </div>
     <div class="content">
         4. Let us one additional requirement for the "Go Vegetarian" button of the Webville Eatery Menu
@@ -81,6 +85,10 @@
         "Mashed Potatoes" in the vegetarian version. You may assume there is a class "turkey" that identifies
         these items in the list. Describe the changes to the Javascript (jQuery) code to implement this new
         requirement.
+        <div class="answer">
+            <strong>Answer</strong><br>
+            $("li.turkey").replaceWith("&lt;li class="mashed_potatoes">Mashed Potatoes &lt/li&gt;")
+        </div>
     </div>
     <div class="content">
         5. Write Javascript (jQuery) code to change the color of the parent and grandparent list items of the span

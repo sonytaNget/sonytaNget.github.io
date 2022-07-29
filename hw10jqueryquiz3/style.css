@@ -3,4 +3,8 @@ h1 {
 }
 .content {
     margin-left: 30pt;
+    margin-bottom: 20pt;
+}
+.answer {
+    color: green;
 }
