@@ -22,6 +22,7 @@ $(document).ready(function(){
     $("#start").click(function(){
 
       start = true;
+      hitAnyWall = false;
       $("#status").text("Click the " + "\"S\"" + " to begin.");
       $(".boundary").css("background-color", "#eeeeee");
     }); 

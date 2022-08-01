@@ -11,7 +11,7 @@ class Bank {
     }
 
     showList() {
-        debugger;
+       
         var listAccountInfo = Bank.accountInfoList;//JSON.parse(localStorage.getItem("accountList"));
         var result = "";
         if (listAccountInfo.length > 0) {
