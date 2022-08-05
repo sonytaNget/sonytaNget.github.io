@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <!-- <link rel="stylesheet" href="/public/css/main.css"> -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+    <form action="/add" method="post">
+        <div class="block">
+            <label for="first">Enter A: </label>
+            <input type="number" name="first">
+        </div>
+        <div class="block">
+            <label for="second">Enter B: </label>
+            <input type="number" name="second">
+        </div>
+        <div class="block">
+            <label for="opration">Please select an operation: </label>
+            <select name="opration" id="opration">
+                <option value="add">add</option>
+                <option value="subtract">subtract</option>
+                <option value="multiply">multiply</option>
+                <option value="divide">divide</option>
+            </select>
+        </div>
+        <div class="block">
+            <input id="btn" type="submit" value="Click">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.block {
+    margin-bottom: 10pt;
+}
+form {
+   width: 50%;
+   margin: 5% 40%;
+}
+#btn {
+    background-color: blue;
+    color: white;
+}
