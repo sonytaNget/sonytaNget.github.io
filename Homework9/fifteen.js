@@ -6,7 +6,7 @@ var bpiece = [];
 
 window.onload = function() {
 
-	puzzle =  $("#puzzlearea div");
+	puzzle =  $$("#puzzlearea div");
 	var row = 0, right = 0, top = 0;
 
 	for (var i=0;i<puzzle.length;i++){
