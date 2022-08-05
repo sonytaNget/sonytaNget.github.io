@@ -76,7 +76,7 @@ var background_Position = function(piece , item){
 var regularP = function(p){
 	p.addClassName("puzzlepiece");
 	p.style.border = "2px solid black";
-	p.style.backgroundImage = "url(background.jpg)";
+	p.style.backgroundImage = "url(background.jpeg)";
 	p.style.backgroundSize = "400px 400px";
 };
 
