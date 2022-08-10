@@ -1,0 +1,40 @@
+.header {
+    background-color: lightgrey;
+    margin: 0 auto;
+    padding: 10pt;
+}
+.search_area {
+    background-color: rgb(228, 228, 228);
+    padding: 10pt;
+    margin:0;
+}
+
+#loader {
+    margin-top: 10px; 
+    height:  15pt; 
+    width: 15pt
+}
+.validation {
+    float: right;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    background: #fff;
+}
+
+.defclass{
+    padding: 5pt;
+    color: black;
+}
+#item{
+    margin: 5pt;
+    padding: 5pt;
+}
+.picJS {
+    width: 70pt;
+}
