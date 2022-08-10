@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Dictionary</title>
+    <link rel="stylesheet" href="dict.css" type="text/css">
+    <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="dict.js"></script>
+</head>
+<body>
+    <h1 class="header"> WAP Online Dictionary</h1>
+    <div class="search_area">
+        <form>
+            <label> Term: 
+                <input type="text" name="searchWord" id="wordToTrans">
+            </label> 
+            <input type="submit" id="fetch" value="Look up">
+            <img id="loader" src="loader.gif" hidden>
+        </form>
+    </div>
+    <h2 id="noData"></h2>
+    <ol id="defList"></ol>
+    <div class="validation">
+        <a href="http://validator.w3.org/check?uri=https://sonytaNget.github.io/dictionaryproject/">
+            <img src="https://manalabs.org/img/w3c-html.png" alt="w3c Image">
+        </a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=https://sonytanget.github.io/dictionaryproject/" target="_blank">
+            <img src=http://jigsaw.w3.org/css-validator/images/vcss alt="Valid CSS!" class="pic"/>   
+        </a>
+        <a href="https://validator.w3.org/nu/?doc=https://sonytanget.github.io/dictionaryproject/dict.js" target="_blank">
+            <img src="./JSLint.png" alt="Valid JSLint!" class="picJS"/>   
+        </a>
+    </div>
+</body>
+</html>
